@@ -1,6 +1,6 @@
 /* eslint-disable */
-const { defineConfig } = require('vite')
-const { eslintPlugin } = require('vite-plugin-eslint');
+import { defineConfig } from 'vite';
+import eslintPlugin from 'vite-plugin-eslint';
 
 module.exports = defineConfig({
   server: {
