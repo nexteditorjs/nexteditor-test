@@ -10,7 +10,7 @@ import "./style.css";
 
 const root = document.querySelector("#app");
 
-const location = document.location;
+const { location } = document;
 const params = new URLSearchParams(location.search);
 
 const testType = params.get('type') || 'simple';
