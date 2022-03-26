@@ -16,7 +16,7 @@ describe('table test', () => {
     input('{enter}');
     cy.get('div[data-type=editor-container].root>div[data-type=editor-block]').should('have.length', 1);
     getRange().then((range) => {
-      expect(range.getStart().offset).to.equal(0);
+      expect(range.start.offset).to.equal(0);
     })
     //
     getEditor().then((editor) => {
@@ -28,7 +28,7 @@ describe('table test', () => {
       expect(children.length).to.equal(9);
       const focusedContainerId = children[3];
       // focused on second row
-      cy.get(`div[data-type=editor-container][data-container-id=${focusedContainerId}].child div[data-type=editor-block]`).should('have.length', 1).should('have.id', editor.selection.range.getStart().blockId);
+      cy.get(`div[data-type=editor-container][data-container-id=${focusedContainerId}].child div[data-type=editor-block]`).should('have.length', 1).should('have.id', editor.selection.range.start.blockId);
     })
     //
     input('|abc|def|ghi|');

@@ -9,70 +9,70 @@ describe('Simple input test', () => {
     cy.get('div[data-type=editor-block]').should('to.have.text', '123');
     //
     getRange().then((range) => {
-      expect(range.getStart().offset).to.equal(3);
+      expect(range.start.offset).to.equal(3);
     })
 
     input('{enter}');
     cy.get('div[data-type=editor-block]').should('have.length', 2);
     getRange().then((range) => {
-      expect(range.getStart().offset).to.equal(0);
+      expect(range.start.offset).to.equal(0);
     })
     //
     input('{leftArrow}');
     getRange().then((range) => {
-      expect(range.getStart().offset).to.equal(3);
+      expect(range.start.offset).to.equal(3);
     })
     //
     input('{downArrow}');
     getRange().then((range) => {
-      expect(range.getStart().offset).to.equal(0);
+      expect(range.start.offset).to.equal(0);
     })
     //
     input('😊1😊😊😊😊😊1');
     getRange().then((range) => {
-      expect(range.getStart().offset).to.equal(14);
+      expect(range.start.offset).to.equal(14);
     })
     //
     input('{leftArrow}');
     getRange().then((range) => {
-      expect(range.getStart().offset).to.equal(13);
+      expect(range.start.offset).to.equal(13);
     })
     //
     input('{leftArrow}');
     getRange().then((range) => {
-      expect(range.getStart().offset).to.equal(11);
+      expect(range.start.offset).to.equal(11);
     })
     //
     input('{leftArrow}');
     getRange().then((range) => {
-      expect(range.getStart().offset).to.equal(9);
+      expect(range.start.offset).to.equal(9);
     })
 
     //
     input('{home}');
     getRange().then((range) => {
-      expect(range.getStart().offset).to.equal(0);
+      expect(range.start.offset).to.equal(0);
     })
 
     //
     input('{end}');
     getRange().then((range) => {
-      expect(range.getStart().offset).to.equal(14);
+      expect(range.start.offset).to.equal(14);
     })
 
     input('{enter}');
     getRange().then((range) => {
-      expect(range.getStart().offset).to.equal(0);
+      expect(range.start.offset).to.equal(0);
     })
 
     input('The quick brown fox jumps over the lazy dog.');
     getRange().then((range) => {
-      expect(range.getStart().offset).to.equal(44);
+      expect(range.start.offset).to.equal(44);
     })
 
     input('{meta}{leftArrow}');
     getRange().then((range) => {
-      expect(range.getStart().offset).to.equal(40);
+      expect(range.start.offset).to.equal(40);
     })
   
 
