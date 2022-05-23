@@ -11,11 +11,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@nexteditorjs/nexteditor-core": "0.0.27",
-    "@nexteditorjs/nexteditor-input-handlers": "0.0.27",
-    "@nexteditorjs/nexteditor-table-block": "0.0.27",
-    "@nexteditorjs/nexteditor-sharedb": "0.0.27",
-    "@nexteditorjs/nexteditor-yjs": "0.0.27"
+    "@nexteditorjs/nexteditor-core": "0.0.37",
+    "@nexteditorjs/nexteditor-input-handlers": "0.0.37",
+    "@nexteditorjs/nexteditor-table-block": "0.0.37",
+    "@nexteditorjs/nexteditor-sharedb": "0.0.37",
+    "@nexteditorjs/nexteditor-yjs": "0.0.37"
   },
   "devDependencies": {
     "eslint-config-prettier": "*",
